@@ -231,7 +231,9 @@
 		"test-compile": "tsc -p ./",
 		"build": "gulp downloadLibertyLSJars downloadLSP4JakartaJars",
 		"buildLocal": "gulp buildLemminxLiberty buildLibertyServer",
-		"buildJakarta": "gulp buildJakartaJdt buildJakartaLs"
+		"buildJakarta": "gulp buildJakartaJdt buildJakartaLs",
+		"pretest":"npm run compile",
+        "test":"node ./out/test/runTest.js"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
