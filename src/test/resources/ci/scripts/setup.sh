@@ -75,7 +75,7 @@ installBaseSoftware() {
         brew install curl unzip || true
       #  brew install --cask docker
         brew install homebrew/cask/docker
-        open -a docker
+      #  open -a docker
     else
         # Note: Docker is already installed on the windows VMs provisioned by GHA.
         # Location: C:\Program Files\Docker\dockerd.exe
