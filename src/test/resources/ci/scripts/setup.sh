@@ -73,7 +73,8 @@ installBaseSoftware() {
     elif [[ $OS == "Darwin" ]]; then
         brew update
         brew install curl unzip || true
-        brew install docker
+        brew install --cask docker
+        brew install homebrew/cask/docker
         open -a docker
     else
         # Note: Docker is already installed on the windows VMs provisioned by GHA.
