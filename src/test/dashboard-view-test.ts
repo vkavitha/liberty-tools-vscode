@@ -136,10 +136,12 @@ it('start with history from liberty dashboard', async () => {
 
 it('start with docker from liberty dashboard', async () => {
 
-
+  console.log("b4 launchStartServerWithDocker");
   await utils.launchStartServerWithDocker(section);
+    console.log("after launchStartServerWithDocker");
   await utils.delay(60000);
   const serverStartStatus = await utils.checkTerminalforServerState(SERVER_START_STRING);
+  console.log("after checkTerminalforServerState ");
   if(!serverStartStatus)
     console.log("Server started message not found in the logs");
   else

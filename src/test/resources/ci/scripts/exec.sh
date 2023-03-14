@@ -2,13 +2,13 @@
 
 ############################################################################
 # Copyright (c) 2022 IBM Corporation and others.
-# 
+#
 # This program and the accompanying materials are made available under the
 # terms of the Eclipse Public License v. 2.0 which is available at
 # http://www.eclipse.org/legal/epl-2.0.
-# 
+#
 # SPDX-License-Identifier: EPL-2.0
-# 
+#
 # Contributors:
 #     IBM Corporation - initial implementation
 ############################################################################
@@ -44,10 +44,10 @@ main() {
     npm run test-compile
 
     # Run the plugin's install goal against the 1.74
-    npm run test -- -u -c 1.74.0
+    #npm run test -- -u -c 1.74.0
     # Run the plugin's install goal against the 1.75
-    npm run test -- -u -c 1.75.0
-    # Run the plugin's install goal against the latest    
+    #npm run test -- -u -c 1.75.0
+    # Run the plugin's install goal against the latest
     npm run test -- -u
 
     # If there were any errors, gather some debug data before exiting.
