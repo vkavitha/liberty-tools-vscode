@@ -73,7 +73,7 @@ installBaseSoftware() {
     elif [[ $OS == "Darwin" ]]; then
         brew update
         brew install curl unzip || true
-        brew install --cask docker
+      #  brew install --cask docker
         brew install homebrew/cask/docker
         open -a docker
     else
