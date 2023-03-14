@@ -74,7 +74,8 @@ installBaseSoftware() {
         brew update
         brew install curl unzip || true
       #  brew install --cask docker
-        brew install homebrew/cask/docker
+        brew install docker-machine docker
+        brew services start docker-machine
       #  open -a docker
     else
         # Note: Docker is already installed on the windows VMs provisioned by GHA.
