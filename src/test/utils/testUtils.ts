@@ -66,22 +66,22 @@ export function getMvnProjectPath(): string {
 
     console.log("Launching Start Server action");
     await sectionName.expand();
-    console.log("after sectionName.expand")
+  //  console.log("after sectionName.expand")
     const item = await sectionName.findItem(MAVEN_PROJECT) as DefaultTreeItem;
-      console.log("after sectionname.finditem");
+    //  console.log("after sectionname.finditem");
     expect(item).not.undefined;
 
     if (process.platform === 'darwin') {//Only for MAC platform
-        console.log("Inside MAC b4 MapContextMenuForMac")   ;
+      //  console.log("Inside MAC b4 MapContextMenuForMac")   ;
       await MapContextMenuforMac( item,START_DASHBOARD_MAC_ACTION_WITHDOCKER);
-        console.log("Inside MAC after MapContextMenuForMac") ;
+    //    console.log("Inside MAC after MapContextMenuForMac") ;
       return true;
     } else { // NON MAC platforms
-      console.log("Inside NONMAC b4 OpenContextMenu") ;
+      //console.log("Inside NONMAC b4 OpenContextMenu") ;
       const menuItem = await item?.openContextMenu();
       console.log("Inside NONMAC after OpenContextMenu") ;
       await menuItem?.select(START_DASHBOARD_ACTION_WITHDOCKER);
-          console.log("Inside NONMAC after select") ;
+        //  console.log("Inside NONMAC after select") ;
 
   }
 
@@ -158,13 +158,13 @@ export function getMvnProjectPath(): string {
       }
       else
       {
-        console.log("Found text had NO matching strings - text is  "+ text);
+      //  console.log("Found text had NO matching strings - text is  "+ text);
         foundText = false;
       }
       count++;
       await workbench.getDriver().sleep(10000);
     } while(!foundText && (count <= 20));
-    console.log("Exited after retrial :"+ count);
+  //  console.log("Exited after retrial :"+ count);
     await workbench.executeCommand('terminal clear');
     return foundText;
   }

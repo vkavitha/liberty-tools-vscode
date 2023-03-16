@@ -19,4 +19,4 @@ export const START_DASHBOARD_ACTION_WITHDOCKER = "Start in container";
 export const START_DASHBOARD_MAC_ACTION_WITHDOCKER = "Liberty: Start in container";
 export const SERVER_START_STRING = "The defaultServer server is ready to run a smarter planet";
 export const SERVER_STOP_STRING = "defaultServer stopped";
-
+export const SERVER_STOP_DOCKER_STRING = "BUILD SUCCESS";
